@@ -536,42 +536,88 @@ body {
   font-size: 1.5rem;
 }
 
-.image-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width as needed */
-  grid-gap: 10px; /* Gap between images */
-  width: 100%; /* Ensures container takes full width of parent */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures spacing between team members */
 }
 
 .team-member {
-  flex: 1 1 22%; /* Team members take 22% of the container width on larger screens */
+  flex: 1 1 calc(33.333% - 20px); /* Three per row on larger screens */
   margin: 10px;
   text-align: center;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
 .team-member img {
-  width: 50%; /* Make the image responsive */
-  height: auto;
+  width: 150px; /* Set a fixed width for all images */
+  height: 150px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensures images fit within the defined dimensions while preserving aspect ratio */
   border-radius: 50%; /* Optional: make images circular */
 }
+
+/* Media query for tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  .team-member {
+    flex: 1 1 calc(50% - 20px); /* Two per row on tablet devices */
+  }
+  .team-member img {
+    width: 120px; /* Adjust image size for smaller screens */
+    height: 120px;
+  }
+}
+
+/* Media query for mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  .team-member {
+    flex: 1 1 100%; /* One per row on mobile devices */
+  }
+  .team-member img {
+    width: 100px; /* Adjust image size for mobile */
+    height: 100px;
+  }
+}
 .logos-container {
-  
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  background-color: white; /* Set background color to white */
-  padding: 20px; /* Add padding */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures spacing between logos */
+  background-color: #f7f7ff; /* Matching the light blue background color */
+  padding: 20px; /* Add padding for spacing */
 }
 
 .logos {
-  border: 0px solid black;
-  padding: 10px;
+  flex: 1 1 calc(50% - 20px); /* Two per row on larger screens */
+  margin: 10px;
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 150px; /* Optional: Set a fixed height to align logos within the same space */
   text-align: center;
+  box-sizing: border-box; /* Ensures padding and border are included in the width */
 }
 
 .logos img {
-  width: 200px;
-  height: 100px;
+  max-width: 100%; /* Makes sure images do not exceed the container width */
+  max-height: 100%; /* Makes sure images do not exceed the container height */
+  object-fit: contain; /* Ensures images maintain aspect ratio while fitting in the container */
 }
 
+/* Media query for tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  .logos {
+    flex: 1 1 calc(50% - 20px); /* Two per row on tablet devices */
+  }
+  .logos {
+    height: 120px; /* Adjust height for smaller screens */
+  }
+}
 
+/* Media query for mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+  .logos {
+    flex: 1 1 100%; /* One per row on mobile devices */
+  }
+  .logos {
+    height: 100px; /* Adjust height for mobile */
+  }
+}
