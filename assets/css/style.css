@@ -536,23 +536,23 @@ body {
   font-size: 1.5rem;
 }
 
-.team-container {
+.image-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  background-color: white; /* Set background color to white */
-  padding: 20px; /* Add padding */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust min-width as needed */
+  grid-gap: 10px; /* Gap between images */
+  width: 100%; /* Ensures container takes full width of parent */
 }
 
 .team-member {
-  border: 0px solid black;
-  padding: 10px;
+  flex: 1 1 22%; /* Team members take 22% of the container width on larger screens */
+  margin: 10px;
   text-align: center;
 }
 
 .team-member img {
-  width: 200px;
-  height: 200px;
+  width: 50%; /* Make the image responsive */
+  height: auto;
+  border-radius: 50%; /* Optional: make images circular */
 }
 .logos-container {
   
