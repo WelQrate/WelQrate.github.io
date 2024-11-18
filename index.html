@@ -227,12 +227,12 @@
             <ul>
                 <li><a href="https://vanderbilt.box.com/v/WelQrate-Datasets">WelQrate_v1.0</a></li>
             </ul>
-            
+
             <h3>Links</h3>
             <ul>
                 <li><a href="https://github.com/LanceKnight/WelQrate/tree/main/Curation_Scripts">Curation Source Codes</a></li>
                 <li><a href="https://github.com/LanceKnight/WelQrate/tree/main/Experiment_Codes">Experiment Source Codes</a></li>
-                <li><a href="./soon.html">Link to Paper</a></li>
+                <li><a href="https://arxiv.org/pdf/2411.09820">Link to Paper</a></li>
                 <div class="clustermap-container">
                     <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=RzBif1LK20ba7dfNvKOpngvuQE5PW8AWHfYL87yOSzI&co=67998e&cmo=febf12'></script>
                 </div>
@@ -241,9 +241,24 @@
 
         <!-- Content Area -->
         <main class="content">
-            <section id="about">
-                <h2>Curation Pipeline</h2>
-                <p>(a) Curation pipeline overview <br>(b) An example of the hierarchical curation with AID2258.</p>
+            <section id="Background">
+                <h2>Introduction</h2>
+                <p>Examples of current issues in existing datasets that impede the progress of applying AI in small molecule drug discovery:</p>
+                <img src="assets/img/issues.png" alt="Current Issues" class="img-fluid content-image">
+            </section>
+
+            <section id="WelQrate Evaluation Framework">
+                <h2><i>WelQrate</i> Evaluation Framework</h2>
+                <p><i>WelQrate</i> Evaluation Framework establishes a foundation for benchmarking by focusing on three key aspects:</p>
+                <img src="assets/img/WelQrate_framework.png" alt="WelQrate Evaluation Framework" class="img-fluid content-image">
+            </section>
+
+
+
+            <section id="curation">
+                <h2><i>WelQrate</i> Dataset Collection Curation Pipeline</h2>
+                <p>The <i>WelQrate</i> dataset collection was meticulously curated by reviewing experimental data hosted on PubChem and applying multiple filters along with hierarchical curation to ensure the high quality.
+                    <br>(a) Curation pipeline overview <br>(b) An example of the hierarchical curation with AID2258.</p>
                 <img src="assets/img/overview.png" alt="Curation Pipeline Overview" class="img-fluid content-image">
             </section>
 
@@ -252,6 +267,18 @@
                 <img src="assets/img/dataset_table.png" alt="Dataset Statistics" class="img-fluid content-image">
                 <p class="caption">Statistics of our 9 datasets in WelQrate dataset collection, which has coverage
 of various important drug targets, challenging but realistic low active percentages. * Indicates additional experimental measurements are available for those datasets.</p>
+            </section>
+
+            <section id="WelQrate Evaluation Metrics">
+                <h2><i>WelQrate</i> Evaluation Metrics</h2>
+                <p>In practice, only the top-ranked predicted molecules are selected for experimental validation. The <i>WelQrate</i> evaluation framework proposes four metrics to align with this practical approach.</p>
+                <img src="assets/img/metrics.png" alt="Evaluation Metrics" class="img-fluid content-image">
+            </section>
+
+            <section id="WelQrate Data Split">
+                <h2><i>WelQrate</i> Data Split</h2>
+                <p><i>WelQrate</i> provides two data split scheme, each with five different splits per dataset. Reported formance should be averaged across five splits to ensure robustness.</p>
+                <img src="assets/img/split.png" alt="Data Split" class="img-fluid content-image">
             </section>
 
 
@@ -351,7 +378,7 @@ of various important drug targets, challenging but realistic low active percenta
 
             <!-- Affiliations Section -->
             <div class="affiliations">
-				<div class="affiliations-group"> 
+				<div class="affiliations-group">
 				    <h4>Universities</h4>
 				    <a href="https://www.vanderbilt.edu/" target="_blank">
 				        <img src="assets/img/vu.png" alt="Vanderbilt University">
